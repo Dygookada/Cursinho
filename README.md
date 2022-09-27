@@ -1,2 +1,3 @@
 # Cursinho
-Aprendendo sobre pytohn
+Aprendendo sobre python
+1-Projeto Pokemon
