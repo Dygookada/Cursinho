@@ -63,8 +63,11 @@ for status in total_status:
 ultimo = len(nome)
 #print(len(ind),len(nome),len(ti),len(st))
 with open ('pokedex.csv','a',newline='', encoding='utf-8') as f:
+        f.seek(0,0)
+        linha = " # ,Name,[Type],[Total,HP,Attack,Defense,Sp.Atk,Sp.Def,Speed];\n"
+        f.write(linha)
         for i in range(0, ultimo):
-                linha = str(ind[i]) + ',' + str(nome[i]) + ',' + str(ti[i]) + ',' + str(st[i]) + ";\n"
+                linha = str(ind[i]) + ',' + str(nome[i]) + ',' + str(ti[i]) + ',' + str(st[i+1]) + ";\n"
                 #print(type(ind[i]),type(nome),type(ti),type(st))
                 #print(linha)
                 f.write(linha)
